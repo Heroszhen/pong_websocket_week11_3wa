@@ -1,0 +1,20 @@
+{
+  "name": "pong_websocket",
+  "version": "1.0.0",
+  "description": "Jeu pong en websocket",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-refresh server.js"
+  },
+  "author": "zhen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0",
+    "socket.io": "^3.1.1"
+  },
+  "devDependencies": {
+    "browser-refresh": "^1.7.3"
+  }
+}

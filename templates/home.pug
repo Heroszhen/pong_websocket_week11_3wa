@@ -1,0 +1,56 @@
+extends layout.pug
+
+block content
+    #part1
+        form(style={"width":"40%"})
+            .h2.text-center.mb-4 Pong
+            .alert.alert-danger.mb-2.d-none
+            .mb-3
+                input#inputname.form-control(type='text' placeholder='nom')
+            .mb-3
+                select#selectrole.form-select
+                    option(value='') 
+                    option(value='1') Joueur 1
+                    option(value='2') Joueur 2
+                    option(value='3') Spectateur
+            button.btn.btn-primary(type='submit') Submit
+            
+    .container-fluid.d-none#part2
+        .row 
+            .col-md-4 
+                div#chat
+                    div
+                        div#me.text-center.h5
+                        button.btn.btn-outline-danger.btn-sm.fullwidth#btn_logout(type='button') Logout
+                    div#allmessages
+                    div 
+                        input#inputmessage.form-control(type='text' placeholder='message')
+            .col-md-8
+                div#content
+                    div#choices 
+                        button.btn.btn-primary.btn-sm.me-2.d-none#btn_ready(type='button') Prêt
+                        button.btn.btn-danger.btn-sm.me-2.d-none#btn_arret(type='button') Arrêter
+                        button.btn.btn-info.btn-sm.me-2#btn_music(type='button') Musique
+                        img#turn(src="https://www.materialui.co/materialIcons/action/autorenew_grey_192x192.png" style="background:white")
+                        div#players.text-center.h5
+                    div#score.text-center.mt-2.fw-bold
+                        
+                    div#pong
+                        canvas#canvas(width='550' height='480')
+    div.d-none
+        div
+            audio#ballaudio(controls src='/files/ball.wav')
+            | Your browser does not support the
+            code audio
+            | element.
+        div
+            audio#ballaudio(controls src='/files/Voices_Patrick Patrikios.mp3')
+            | Your browser does not support the
+            code audio
+            | element.
+
+    template#messagesTpl
+      div.onemessage
+        span.author.fw-bold
+        span.ps-1.pe-1 :
+        span.message

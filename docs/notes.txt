@@ -1,0 +1,13 @@
+npm install express
+npm i browser-refresh --save-dev
+npm i pug --save
+npm install socket.io
+
+
+https://html2pug.now.sh/
+
+up
+keyCode: 38
+
+down
+keyCode: 40

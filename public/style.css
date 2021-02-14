@@ -1,0 +1,61 @@
+.fullwidth{
+    width:100%;
+}
+
+img{
+    width:100%;
+    height:auto;
+}
+
+
+#part1{ 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+}
+#chat{
+    width:100%;
+    height:100vh;
+    background-color:ghostwhite;
+    padding:10px;
+}
+
+#chat>div:nth-child(2){
+    height:calc(100% - 105px);
+    background-color: white;
+    overflow-y: auto;
+    padding:5px;
+}
+#chat .onemessage{
+    margin-bottom:10px;
+}
+
+#content{
+    width:100%;
+    height:100vh;
+    background:white;
+    overflow: hidden;
+}
+
+#content #choices{
+    height:10%;
+    padding:5px;
+}
+#content #choices img{
+    width:30px;
+    cursor:pointer;
+}
+#content #pong{
+    height:90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:5px;
+}
+#content #pong #canvas{
+    width:550px;
+    height:480px;
+    background:black;
+}
